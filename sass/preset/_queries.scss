@@ -1,0 +1,53 @@
+@media screen and (max-width:992px) {
+    #form {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        .form__mapa {
+            width: 100%;
+            height: auto;
+        }
+        .form__contacto {
+            padding: 0;
+            margin-top: 20px;
+        }
+    }
+
+    .grid__productos {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(6, 200px) !important;
+
+        grid-template-areas: 
+        "ps5-a ps5-c"
+        "ps5-b ps5-b"
+        "ps5-d ps5-d"
+        "ps5-e ps5-e"
+        "ps5-f ps5-g"
+        "ps5-h ps5-i"
+        !important;   
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .form__contacto {
+        width: 100% !important;
+    }
+
+    .grid__productos {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(9, 200px) !important;
+
+        grid-template-areas: 
+        "ps5-a"
+        "ps5-b"
+        "ps5-c"
+        "ps5-d"
+        "ps5-e"
+        "ps5-f"
+        "ps5-g"
+        "ps5-h"
+        "ps5-i"
+        !important;   
+    }
+}

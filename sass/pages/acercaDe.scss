@@ -1,0 +1,176 @@
+h1 {
+    text-align: center;
+    font-size: 15px;
+    animation-name: efecto_agrandar_texto;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+}
+
+@keyframes efecto_agrandar_texto {
+    0% {font-size: 15px; color: blue;}
+    20%{font-size: 18px; color: green;}
+    50%{font-size: 22px;}
+    70%{font-size: 24px;}
+    90%{font-size: 25px;}
+    100%{font-size: 26px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+}
+
+.border{
+    border: 1px black solid;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+}
+
+/*-----------------------------*/
+.gradientes {
+
+    .transition {
+        width: 50px;
+        height: 50px;
+        transition: width 2s , height .5s , background-color 3s;
+        overflow:hidden;
+    }
+    .transition:hover {
+        width: 200px;
+        height: 180px;
+    }
+
+
+    .box1 {
+        background-image: linear-gradient(to left, red, yellow, orange);
+    }
+    .box2 {
+        background-image: linear-gradient(to top, red, yellow, orange);
+    }
+    .box3 {
+        background-image: radial-gradient(circle, blue, rgb(242, 8, 242));
+    }
+    .box4 {
+        background-image: radial-gradient(ellipse 200px 60px, green, brown );
+    }
+}
+/*-----------------------------*/
+.translate {
+    /*
+    EL PRIMER VALOR:  DESPLAZA EL EJE HORIZONTAL (X)
+    EL SEGUNDO VALOR: DESPLAZA EL EJE VERTICAL   (Y)
+                                            X         Y
+    VALORES POSITIVOS: MOVER AL ELEMENTO  DERECHA / ABAJO
+                                            X         Y
+    VALORES NEGATIVOS: MOVER AL ELEMENTO  IZQUIERDA / ARRIBA
+    
+    */
+    
+    .box1:hover {
+        transform: translate(40px, 30px);
+        margin-right: 40px;
+    }
+    .box2:hover {
+        transform: translate(-20px, -30px);
+    
+    }
+    .box3:hover {
+        transform: translate(20px, -30px);
+    }
+    .box4:hover {
+        transform: translateY(-40px);
+        
+    }
+    
+}
+/*-----------------------------*/
+.rotate{
+    /*
+    VALORES POSITIVOS: ROTA HACIA LA DERECHA  (SENTIDO HORARIO)
+    VALORES NEGATIVOS: ROTA HACIA LA IZQUIERA (SENTIDO ANTI HORARIO)
+    
+    */
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    .box1 {
+        transition: 1s;
+    }
+    .box1:hover {
+        transform: rotate(90deg);
+        animation: all 1s;
+    }
+    .box2:hover {
+        transform: rotateX(50deg);
+        animation: all 1s;
+    }
+    .box3:hover {
+        transform: rotateY(50deg);
+        animation: all 1s;
+    }
+    .box4:hover {
+        transform: rotateZ(90deg);
+        animation: all 1s;
+    }
+}
+
+.scale {
+    /*
+    PRIMER VALOR: ANCHO (EJE ESCALABLE X)
+    SEGUNDO VALOR: ALTO (EJE ESCALABLE Y)
+
+    VALORES MAYORES A 1, AGRANDAN.
+    VALORES ENTRE 0 Y 1, ACHICAN.
+
+    VALORES NEGATIVOS, ESCALAN INVERTIDO / DADO VUELTA
+
+    scaleX() scaleY()
+    
+    
+    */
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    .box1:hover { 
+        transform: scale(2 , 2);
+        margin: auto;
+    }
+    .box2:hover { 
+        transform: scaleX(2);
+        margin: auto;
+    }
+}
+
+.skew {
+    /*
+    DEFORMACIÓN DE CAJAS EN CUANTO A LOS GRADOS (DEG)
+    PRIMER VALOR: EJE X
+    SEGUNDO VALOR: EJE Y
+    */
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    .box1:hover {
+        transform: skew(400deg);
+        transition: 1s;
+    }
+}
+
